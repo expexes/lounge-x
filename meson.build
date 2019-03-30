@@ -16,9 +16,9 @@ gnomeshell = find_program('gnome-shell', required: false)
 if get_option('flatpak')
 
 if get_option('flatpak-ver') == 'day'
-  theme_dir = join_paths(get_option('datadir'), 'themes', 'Lounge')
+  theme_dir = join_paths(get_option('datadir'), 'themes', 'Lounge-X')
 else
-  theme_dir = join_paths(get_option('datadir'), 'themes', 'Lounge-night')
+  theme_dir = join_paths(get_option('datadir'), 'themes', 'Lounge-X-night')
 endif
 
 gtk3_dir = join_paths(theme_dir, 'gtk-3.0')
@@ -80,14 +80,14 @@ else
 
 # Installation directories
 
-theme_dir = join_paths(get_option('datadir'), 'themes', 'Lounge')
+theme_dir = join_paths(get_option('datadir'), 'themes', 'Lounge-X')
 shell_dir = join_paths(theme_dir, 'gnome-shell')
 gtk2_dir = join_paths(theme_dir, 'gtk-2.0')
 gtk3_dir = join_paths(theme_dir, 'gtk-3.0')
 xfwm_dir = join_paths(theme_dir, 'xfwm4')
 
   # Dark theme
-dark_theme_dir = join_paths(get_option('datadir'), 'themes', 'Lounge-night')
+dark_theme_dir = join_paths(get_option('datadir'), 'themes', 'Lounge-X-night')
 dark_gtk2_dir = join_paths(dark_theme_dir, 'gtk-2.0')
 dark_gtk3_dir = join_paths(dark_theme_dir, 'gtk-3.0')
 dark_xfwm_dir = join_paths(dark_theme_dir, 'xfwm4')
@@ -106,7 +106,7 @@ install_data(index_file, install_dir: theme_dir)
 configure_file(input : index_file,
                output : 'index.theme',
                capture : true,
-               command: ['sed', 's#Lounge#Lounge-night#g', '@INPUT@'],
+               command: ['sed', 's#Lounge-X#Lounge-X-night#g', '@INPUT@'],
                install_dir: dark_theme_dir)
 
 

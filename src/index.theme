@@ -1,6 +1,6 @@
 [X-GNOME-Metatheme]
-Name=Lounge
+Name=Lounge-X
 Type=X-GNOME-Metatheme
-Comment=Lounge theme
+Comment=Lounge-X theme
 Encoding=UTF-8
-GtkTheme=Lounge
+GtkTheme=Lounge-X
