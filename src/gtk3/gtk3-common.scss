@@ -117,7 +117,7 @@ iconview { @extend .view; }
 
 .rubberband,
 rubberband {
-  border: 1px solid darken($selected_bl_color, 10%);
+  border: 2px solid darken($selected_bl_color, 10%);
   background-color: transparentize(darken($selected_bl_color, 10%), 0.8);
 }
 
